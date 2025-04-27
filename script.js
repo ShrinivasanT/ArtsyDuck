@@ -20,24 +20,86 @@ window.addEventListener("scroll", () => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const filterBtns = document.querySelectorAll("[data-filter-btn]");
-  const cards = document.querySelectorAll("[data-product-card]");
+// Function to filter products based on selected filter button
+function filterProducts(category) {
+  // Get all product cards
+  const productCards = document.querySelectorAll("[data-product-card]");
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const selectedCategory = this.getAttribute("data-filter-btn");
-      cards.forEach((card) => {
-        const cardCategory = card.getAttribute("data-category");
-        if (selectedCategory === "all" || cardCategory === selectedCategory) {
-          card.style.display = "";
-        } else {
-          card.style.display = "none";
-        }
-      });
-      // Optional: Highlight active filter button
-      filterBtns.forEach((b) => b.classList.remove("bg-blue-700"));
-      this.classList.add("bg-blue-700");
-    });
+  // Loop through all product cards
+  productCards.forEach((card) => {
+    // Get the categories for the current card (split in case there are multiple categories)
+    const productCategories = card.getAttribute("data-category").split(" ");
+
+    // Check if the card's categories match the selected filter
+    if (category === "all" || productCategories.includes(category)) {
+      // Show the product card
+      card.style.display = "block";
+    } else {
+      // Hide the product card
+      card.style.display = "none";
+    }
+  });
+}
+
+// Event listeners for filter buttons
+document.getElementById("filterAll").addEventListener("click", () => {
+  filterProducts("all");
+});
+
+document.getElementById("filterTshirt").addEventListener("click", () => {
+  filterProducts("tshirt");
+});
+
+document.getElementById("filterTotebag").addEventListener("click", () => {
+  filterProducts("totebag");
+});
+
+document.getElementById("filterAnime").addEventListener("click", () => {
+  filterProducts("anime");
+});
+
+document.getElementById("filterFloral").addEventListener("click", () => {
+  filterProducts("floral");
+});
+
+document.getElementById("filterAnonymous").addEventListener("click", () => {
+  filterProducts("anonymous");
+});
+
+// Selecting the slider and buttons
+const slider = document.getElementById("slider");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+// Button click event handlers
+prevBtn.addEventListener("click", () => {
+  slider.scrollBy({
+    left: -300, // Scroll left by 300px
+    behavior: "smooth", // Smooth scrolling
   });
 });
+
+nextBtn.addEventListener("click", () => {
+  slider.scrollBy({
+    left: 300, // Scroll right by 300px
+    behavior: "smooth", // Smooth scrolling
+  });
+});
+
+// Intersection Observer to trigger text appearance on scroll
+const heroText = document.getElementById("heroText");
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        heroText.classList.add("visible"); // Add class when the element is in view
+      }
+    });
+  },
+  {
+    threshold: 0.5, // When 50% of the section is in view, trigger the effect
+  }
+);
+
+observer.observe(document.getElementById("hero"));

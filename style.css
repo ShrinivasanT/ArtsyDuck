@@ -53,3 +53,7 @@ body {
   outline: none !important;
   box-shadow: none !important;
 }
+#heroText.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
