@@ -21,3 +21,49 @@ body {
 .social-link:hover {
   color: #1d4ed8; /* A blue shade. Feel free to change to a color you prefer */
 }
+
+/* Default styles for the banner section */
+#banner {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+#banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  #banner {
+    height: 40vh;
+    width: 100%;
+    transform: scale(0.9); /* Slightly scale down contents */
+    transform-origin: center; /* Ensure scaling is centered */
+  }
+
+  #banner span {
+    font-size: 1.5rem;
+  }
+
+  #banner .top-4 {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  #banner .top-1/2 {
+    font-size: 1.5rem;
+  }
+
+  #banner .bottom-4 {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  #banner .bg-black.opacity-20 {
+    opacity: 0.3;
+  }
+}
