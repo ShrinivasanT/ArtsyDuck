@@ -85,3 +85,13 @@ nextBtn.addEventListener("click", () => {
     behavior: "smooth", // Smooth scrolling
   });
 });
+
+const menuBtn = document.getElementById("menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+if (menuBtn && sidebar) {
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("hidden");
+    sidebar.classList.toggle("block");
+  });
+}
