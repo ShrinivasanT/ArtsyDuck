@@ -85,21 +85,3 @@ nextBtn.addEventListener("click", () => {
     behavior: "smooth", // Smooth scrolling
   });
 });
-
-// Intersection Observer to trigger text appearance on scroll
-const heroText = document.getElementById("heroText");
-
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        heroText.classList.add("visible"); // Add class when the element is in view
-      }
-    });
-  },
-  {
-    threshold: 0.5, // When 50% of the section is in view, trigger the effect
-  }
-);
-
-observer.observe(document.getElementById("hero"));

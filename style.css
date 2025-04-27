@@ -21,39 +21,3 @@ body {
 .social-link:hover {
   color: #1d4ed8; /* A blue shade. Feel free to change to a color you prefer */
 }
-
-.flip-container {
-  /* Ensure the container is positioned relatively so that the images overlay */
-}
-.flip-container img {
-  transform-origin: center;
-}
-/* Front image starts at 0° rotation */
-.front-image {
-  transform: rotateZ(0deg);
-}
-/* Back image starts rotated -90° (hidden from view) */
-.back-image {
-  transform: rotateZ(-90deg);
-}
-/* On hover, the front image rotates to 90° and fades out... */
-.flip-container:hover .front-image {
-  transform: rotateZ(90deg);
-  opacity: 0;
-}
-/* ... while the back image rotates in to 0° and fades in */
-.flip-container:hover .back-image {
-  transform: rotateZ(0deg);
-  opacity: 1;
-}
-#filterAll:focus,
-#filterAll:active {
-  background-color: white !important;
-  color: #1f2937 !important; /* Tailwind's gray-800 */
-  outline: none !important;
-  box-shadow: none !important;
-}
-#heroText.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
