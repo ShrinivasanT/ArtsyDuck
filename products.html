@@ -56,6 +56,16 @@
       .sidebar.open + .content {
         margin-left: 250px;
       }
+      [data-product-card] h3 {
+        height: 2.5rem; /* Fixed height for title */
+        line-height: 1.25rem; /* Adjust line height for consistency */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limit to 2 lines */
+        -webkit-box-orient: vertical;
+        white-space: normal; /* Allow wrapping within the fixed height */
+      }
 
       /* Mobile Styles */
       @media (max-width: 768px) {
@@ -184,7 +194,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/gojo.jpg"
@@ -211,7 +221,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/DS.jpg"
@@ -238,7 +248,7 @@
         <div
           data-product-card
           data-category="tshirt"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/batman.jpg"
@@ -265,7 +275,7 @@
         <div
           data-product-card
           data-category="tshirt floral"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/Lotus.jpg"
@@ -292,7 +302,7 @@
         <div
           data-product-card
           data-category="totebag anonymous"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/wannabe.jpg"
@@ -319,7 +329,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/nezuko.jpg"
@@ -346,7 +356,7 @@
         <div
           data-product-card
           data-category="totebag floral"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/Tote2.jpg"
@@ -373,7 +383,7 @@
         <div
           data-product-card
           data-category="totebag anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/drag.jpg"
@@ -400,7 +410,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/gojo2.jpg"
@@ -427,7 +437,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/Naruto.jpg"
@@ -454,7 +464,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/Lufy.jpg"
@@ -481,7 +491,7 @@
         <div
           data-product-card
           data-category="tshirt anime"
-          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[400px] md:min-h-[400px] sm:min-h-[300px]"
+          class="bg-white shadow rounded-lg overflow-hidden flex flex-col min-h-[20vh] md:min-h-[40vh] sm:min-h-[30vh]"
         >
           <img
             src="img/Tanjiro.jpg"
