@@ -74,33 +74,12 @@
         white-space: normal; /* Allow wrapping within the fixed height */
       }
 
-      /* Floating rounded button styling */
-      .floating-sort-button {
-        position: absolute;
-        top: 100%; /* Position just below the navbar */
+      /* Chatbot widget styling */
+      .chatling-widget {
+        position: fixed;
+        bottom: 1.5rem;
         right: 1.5rem;
-        margin-top: 1.5rem; /* Small gap from navbar */
-        padding: 2vh;
-        color: #575757;
-        border: 1px solid #292929;
-        border-radius: 40%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        z-index: 10;
-        font-size: 0.9rem;
-        font-weight: 600;
-        background-color: #ffffff;
-        text-transform: uppercase;
-      }
-
-      .floating-sort-button:hover {
-        color: #ffffff;
-        background-color: #575757;
-        transform: scale(1.1);
+        z-index: 9; /* Below floating sort button */
       }
 
       /* Mobile Styles */
@@ -122,20 +101,16 @@
           padding: 12px;
         }
 
-        .floating-sort-button {
-          height: 4vh;
-          padding: 3vh;
+        .chatling-widget {
+          bottom: 1rem;
           right: 1rem;
-          margin-top: 0.5rem;
-          font-size: 0.8rem;
         }
       }
 
       /* Extra small screens */
       @media (max-width: 480px) {
-        .floating-sort-button {
-          font-size: 0.75rem;
-          padding: 2.5vh;
+        .chatling-widget {
+          bottom: 0.75rem;
           right: 0.75rem;
         }
       }
@@ -154,7 +129,7 @@
       <ul class="flex space-x-8 md:space-x-8 px-2 md:px-4 py-3 justify-center">
         <li><a href="index.html" class="hover:text-gray-700">Home</a></li>
         <li><a href="index.html" class="hover:text-gray-700">About</a></li>
-        <li><a href="#contact" class="hover:text-gray-700">Contact</a></li>
+        <li><a href="#contact" class="">Contact</a></li>
         <li>
           <a
             href="https://artsyducktracker.vercel.app/"
@@ -162,11 +137,13 @@
             >Track Order</a
           >
         </li>
+        <li>
+          <button onclick="toggleSidebar()" class="hover:text-gray-700">
+            Sort/Filter
+          </button>
+        </li>
       </ul>
       <!-- Floating Sort Button -->
-      <button onclick="toggleSidebar()" class="floating-sort-button">
-        Sort
-      </button>
     </nav>
 
     <section id="products" class="flex">
@@ -636,6 +613,18 @@
         ></iframe>
       </div>
     </footer>
+
+    <!-- Chatling Chatbot Embed Code -->
+    <script>
+      window.chtlConfig = { chatbotId: "5889724719" };
+    </script>
+    <script
+      async
+      data-id="5889724719"
+      id="chatling-embed-script"
+      type="text/javascript"
+      src="https://chatling.ai/js/embed.js"
+    ></script>
 
     <script>
       function toggleSidebar() {
